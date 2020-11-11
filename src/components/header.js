@@ -56,7 +56,7 @@ export default function Header(props) {
                     </Button>
                     <Button className={classes.button} href="https://github.com/hamptoam" >
                     <Typography className={classes.typography}>
-                        Github
+                        LinkedIn
                     </Typography>
                     </Button>
                     </Grid>

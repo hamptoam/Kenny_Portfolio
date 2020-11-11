@@ -1,19 +1,33 @@
-import React, { Component } from "react";
-import './App.css';
-import Main from './components/main.js';
-import Layout from './components/layout.js';
+import React from "react";
+//import './App.css';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid, CssBaseline}   from '@material-ui/core';
+import Header from './components/header';
+import Footer from './components/footer';
+import Main from './components/main';
+import mkebackground from './components/tombarrettmkebackground.jpg';
 
+const useStyles = makeStyles((theme) => ({
+    root: {
+      backgroundSize: 'cover',
+      backgroundImage: `url(${mkebackground})`,
+      backgroundRepeat: 'no-repeat',
+    },
+      }));
 
-class App extends Component {
-
-    render(props) {
+export default function App(){
+     {
+         const classes= useStyles();
         return (
-            <div className="skeleton">           
-                <Layout>
-                <Main />
-                </Layout>
-            </div >                   
+            <React.Fragment>
+            <CssBaseline />
+            <Grid className={classes.root}>
+                <Header/>
+                     <Main/>
+                     <Footer/>
+            </Grid>
+        </React.Fragment>          
         );
     }
 }
-export default App;
+ 

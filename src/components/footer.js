@@ -20,15 +20,11 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
-    maxWidth: '500',
-    },
-  footer: {
-    boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-  
     backgroundColor: 'black',
-    flexDirection: 'row-reverse',
-  },
+      opacity: "80%",
+      flexDirection: 'row-reverse',
+      alignContent: 'center',
+    },
 }));
 
 export default function Footer(props) {
@@ -38,7 +34,7 @@ export default function Footer(props) {
   return (
      
     
-    <Grid item xs={12} className={classes.footer}>
+    <Grid item xs={12} className={classes.root}>
  <Toolbar>
         <Typography variant="h6" align="center" gutterBottom>
           {title}
